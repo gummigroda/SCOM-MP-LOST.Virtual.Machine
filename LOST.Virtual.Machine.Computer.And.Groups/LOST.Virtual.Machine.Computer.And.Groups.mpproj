@@ -1,0 +1,120 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{b5087ec9-6b2e-49bc-a664-db23f6c2991f}</ProjectGuid>
+    <RootNamespace>LOST.Virtual.Machine</RootNamespace>
+    <Name>LOST Virtual Machine Computer And Groups</Name>
+    <ManagementPackName>LOST.Virtual.Machine.Computer.And.Groups</ManagementPackName>
+    <Version>1.0.1.0</Version>
+    <MpFrameworkVersion>v7.0.2</MpFrameworkVersion>
+    <MpFrameworkProfile>OM</MpFrameworkProfile>
+    <ProductVersion>1.1.0.0</ProductVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <GenerateSealed>False</GenerateSealed>
+    <Company>MyCompany</Company>
+    <Copyright>Copyright (c) MyCompany. All rights reserved.</Copyright>
+    <DelaySigning>False</DelaySigning>
+    <AssemblyOriginatorKeyFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <DelaySigning>False</DelaySigning>
+    <Company>LOST</Company>
+    <Copyright>Copyright (c) LOST. All rights reserved.</Copyright>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\LOST.MP.Key\LOST.MP.PairKey.snk</AssemblyOriginatorKeyFile>
+    <GenerateSealed>True</GenerateSealed>
+  </PropertyGroup>
+  <ItemGroup>
+    <ManagementPackReference Include="Microsoft.SystemCenter.InstanceGroup.Library">
+      <HintPath>C:\Program Files (x86)\System Center Visual Studio Authoring Extensions\References\OM2012R2\Microsoft.SystemCenter.InstanceGroup.Library.mp</HintPath>
+      <Alias>SCIG</Alias>
+      <MinVersion>7.5.8501.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.SystemCenter.Library">
+      <Alias>SC</Alias>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.Windows.Library">
+      <Alias>Windows</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.Windows.Server.2008.Discovery">
+      <HintPath>D:\Data\_Git_LOST\SCOM-ManagementPacks\LOST.Virtual.Machine\LOST.Virtual.Machine.Computer.And.Groups\Dependencies\Microsoft.Windows.Server.2008.Discovery.mp</HintPath>
+      <Alias>Win2008</Alias>
+      <MinVersion>6.0.7323.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.Windows.Server.2012.R2.Discovery">
+      <HintPath>D:\Data\_Git_LOST\SCOM-ManagementPacks\LOST.Virtual.Machine\LOST.Virtual.Machine.Computer.And.Groups\Dependencies\Microsoft.Windows.Server.2012.R2.Discovery.mp</HintPath>
+      <Alias>Win2012</Alias>
+      <MinVersion>6.0.7323.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.Windows.Server.2016.Discovery">
+      <HintPath>D:\Data\_Git_LOST\SCOM-ManagementPacks\LOST.Virtual.Machine\LOST.Virtual.Machine.Computer.And.Groups\Dependencies\Microsoft.Windows.Server.2016.Discovery.mp</HintPath>
+      <Alias>Win2016Plus</Alias>
+      <MinVersion>10.0.21.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.Windows.Server.Library">
+      <HintPath>D:\Data\_Git_LOST\SCOM-ManagementPacks\LOST.Virtual.Machine\LOST.Virtual.Machine.Computer.And.Groups\Dependencies\Microsoft.Windows.Server.Library.mp</HintPath>
+      <Alias>WinSrv</Alias>
+      <MinVersion>10.0.8.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="System.Health.Library">
+      <Alias>Health</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="System.Library">
+      <Alias>System</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.SystemCenter.Visualization.Library">
+      <Alias>Visualization</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClassesAndGroups" />
+    <Folder Include="Discoveries" />
+    <Folder Include="Icons" />
+    <Folder Include="Dependencies" />
+    <Folder Include="Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassesAndGroups\Classes.And.Groups.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Discoveries\ClassDiscoveries.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Discoveries\GroupDiscoveries.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Icons\Icons.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ManagementPack.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\LOST.Virtual.Server.Discovery.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\Virtual-Machine.16px.png">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Virtual-Machine.80px.png">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VSAC\Microsoft.SystemCenter.OperationsManager.targets" />
+</Project>

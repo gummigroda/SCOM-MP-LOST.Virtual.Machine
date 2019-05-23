@@ -1,0 +1,117 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TypeDefinitions>
+    <EntityTypes>
+      <ClassTypes>
+        <!-- COMPUTER CLASSES -->
+        <ClassType ID="LOST.Virtual.Windows.Computer.Class" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.Computer" Hosted="false" Singleton="false" Extension="false">
+          <Property ID="VirtualMachineType" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="OSVersion" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="VMAgentVersion" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="VMAgentPath" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+        </ClassType>
+        <ClassType ID="LOST.Virtual.Windows.VMWare.Computer.Class" Accessibility="Public" Abstract="false" Base="LOST.Virtual.Windows.Computer.Class" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.HyperV.Computer.Class" Accessibility="Public" Abstract="false" Base="LOST.Virtual.Windows.Computer.Class" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.Xen.Computer.Class" Accessibility="Public" Abstract="false" Base="LOST.Virtual.Windows.Computer.Class" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.ProxmoxVE.Computer.Class" Accessibility="Public" Abstract="false" Base="LOST.Virtual.Windows.Computer.Class" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.VirtualBox.Computer.Class" Accessibility="Public" Abstract="false" Base="LOST.Virtual.Windows.Computer.Class" Hosted="false" Singleton="false" Extension="false" />
+        <!-- COMPUTER GROUPS -->
+        <ClassType ID="LOST.Virtual.Windows.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.VMWare.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.HyperV.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.Xen.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.ProxmoxVE.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.VirtualBox.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+        <!-- OS COMPUTER GROUPS -->
+        <ClassType ID="LOST.Virtual.Windows.2008.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.2012.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.2012R2.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+        <ClassType ID="LOST.Virtual.Windows.2016Plus.Computers.Group" Accessibility="Public" Abstract="false" Base="SC!Microsoft.SystemCenter.ComputerGroup" Hosted="false" Singleton="true" Extension="false" />
+      </ClassTypes>
+    </EntityTypes>
+  </TypeDefinitions>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <!-- COMPUTER CLASSES -->
+        <DisplayString ElementID="LOST.Virtual.Windows.Computer.Class">
+          <Name>Virtual Windows Computer [LOST]</Name>
+          <Description>Computer being hosted via virtualization</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.Computer.Class" SubElementID="VirtualMachineType">
+          <Name>Virtual Machine Type</Name>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.Computer.Class" SubElementID="OSVersion">
+          <Name>OS Version</Name>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.Computer.Class" SubElementID="VMAgentPath">
+          <Name>VM Agent Path</Name>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.Computer.Class" SubElementID="VMAgentVersion">
+          <Name>VM Agent Version</Name>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.VMWare.Computer.Class">
+          <Name>Virtual Windows VMWare Computer [LOST]</Name>
+          <Description>Computer being hosted by VMWare</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.HyperV.Computer.Class">
+          <Name>Virtual Windows Hyper-V Computer [LOST]</Name>
+          <Description>Computer being hosted by Hyper-V</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.Xen.Computer.Class">
+          <Name>Virtual Windows Xen Computer [LOST]</Name>
+          <Description>Computer being hosted by Xen</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.ProxmoxVE.Computer.Class">
+          <Name>Virtual Windows ProxmoxVE Computer [LOST]</Name>
+          <Description>Computer being hosted by ProxmoxVE</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.VirtualBox.Computer.Class">
+          <Name>Virtual Windows VirtualBox Computer [LOST]</Name>
+          <Description>Computer being hosted by VirtualBox</Description>
+        </DisplayString>
+        <!-- COMPUTER GROUPS -->
+        <DisplayString ElementID="LOST.Virtual.Windows.Computers.Group">
+          <Name>Virtual Windows Computers Group [LOST]</Name>
+          <Description>Any Virtual Windows Computer</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.VMWare.Computers.Group">
+          <Name>Virtual Windows VMWare Computers Group [LOST]</Name>
+          <Description>Any Windows Computer running on a VMWare host</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.HyperV.Computers.Group">
+          <Name>Virtual Windows Hyper-V Computers Group [LOST]</Name>
+          <Description>Any Windows Computer running on a Hyper-V host</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.Xen.Computers.Group">
+          <Name>Virtual Windows Xen Computers Group [LOST]</Name>
+          <Description>Any Windows Computer running on a Xen host</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.ProxmoxVE.Computers.Group">
+          <Name>Virtual Windows ProxmoxVE Computers Group [LOST]</Name>
+          <Description>Any Windows Computer running on a ProxmoxVE host</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.VirtualBox.Computers.Group">
+          <Name>Virtual Windows VirtualBox Computers Group [LOST]</Name>
+          <Description>Any Windows Computer running in a VirtualBox host</Description>
+        </DisplayString>
+        <!-- OS COMPUTER GROUPS -->
+        <DisplayString ElementID="LOST.Virtual.Windows.2016Plus.Computers.Group">
+          <Name>Virtual Windows 2016 Servers [LOST]</Name>
+          <Description>Virtual Servers running Windows Server 2016 +</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.2008.Computers.Group">
+          <Name>Virtual Windows 2008 and 2008R2 Servers [LOST]</Name>
+          <Description>Virtual Servers running Windows Server 2008 and 2008 R2</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.2012.Computers.Group">
+          <Name>Virtual Windows 2012 Servers [LOST]</Name>
+          <Description>Virtual Servers running Windows Server 2012</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.2012R2.Computers.Group">
+          <Name>Virtual Windows 2012 R2 Servers [LOST]</Name>
+          <Description>Virtual Servers running Windows Server 2012 R2</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

@@ -1,0 +1,12 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="LOST.Virtual.Machine.Addendum">
+          <Name>Virtual Machine Addendum [LOST]</Name>
+          <Description>Virtual Machine Addendum: Overrides the default descovery of virtual computers to include VMWare, XEN, ProxmoxVE and VirtualBox VMs</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

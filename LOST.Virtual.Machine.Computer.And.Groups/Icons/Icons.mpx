@@ -1,0 +1,50 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Categories>
+    <Category ID="LOST.Virtual.Windows.Computer.Image.80px.Category" Target="LOST.Virtual.Windows.Computer.Image.80px" Value="System!System.Internal.ManagementPack.Images.DiagramIcon" />
+    <Category ID="LOST.Virtual.Windows.Computer.Image.16px.Category" Target="LOST.Virtual.Windows.Computer.Image.16px" Value="System!System.Internal.ManagementPack.Images.u16x16Icon" />
+  </Categories>
+  <Presentation>
+    <ImageReferences>
+      <!-- COMPUTER CLASS -->
+      <ImageReference ElementID="LOST.Virtual.Windows.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.80px"/>
+      <ImageReference ElementID="LOST.Virtual.Windows.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.16px"/>
+      <!-- COMPUTER VM CLASS -->
+      <ImageReference ElementID="LOST.Virtual.Windows.VMWare.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.VMWare.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.HyperV.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.HyperV.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.Xen.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.Xen.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.ProxmoxVE.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.ProxmoxVE.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.VirtualBox.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.VirtualBox.Computer.Class" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <!-- GROUP VM CLASS -->
+      <ImageReference ElementID="LOST.Virtual.Windows.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.VMWare.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.VMWare.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.HyperV.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.HyperV.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.Xen.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.Xen.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.ProxmoxVE.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.ProxmoxVE.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.VirtualBox.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.VirtualBox.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <!-- OS COMPUTER GROUP CLASS-->
+      <ImageReference ElementID="LOST.Virtual.Windows.2008.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.2008.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.2012.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.2012.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.2012R2.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.2012R2.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.2016Plus.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.16px" />
+      <ImageReference ElementID="LOST.Virtual.Windows.2016Plus.Computers.Group" ImageID="LOST.Virtual.Windows.Computer.Image.80px" />
+    </ImageReferences>
+  </Presentation>
+  <Resources>
+    <Image ID="LOST.Virtual.Windows.Computer.Image.80px" FileName="Virtual-Machine.80px.png" Accessibility="Public" HasNullStream="false" Comment="Bigger icon" />
+    <Image ID="LOST.Virtual.Windows.Computer.Image.16px" FileName="Virtual-Machine.16px.png" Accessibility="Public" HasNullStream="false" Comment="Smaller icon" />
+  </Resources>
+</ManagementPackFragment>

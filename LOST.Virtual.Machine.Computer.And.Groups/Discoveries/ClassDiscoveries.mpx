@@ -1,0 +1,48 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Discoveries>
+      <Discovery ID="LOST.Windows.Virtual.Machine.Discovery.Powershell.Script" Enabled="true" Target="Windows!Microsoft.Windows.Computer" ConfirmDelivery="true" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryClass TypeID="LOST.Virtual.Windows.Computer.Class" />
+          <DiscoveryClass TypeID="LOST.Virtual.Windows.VMWare.Computer.Class" />
+          <DiscoveryClass TypeID="LOST.Virtual.Windows.HyperV.Computer.Class" />
+          <DiscoveryClass TypeID="LOST.Virtual.Windows.Xen.Computer.Class" />
+          <DiscoveryClass TypeID="LOST.Virtual.Windows.ProxmoxVE.Computer.Class" />
+          <DiscoveryClass TypeID="LOST.Virtual.Windows.VirtualBox.Computer.Class" />
+        </DiscoveryTypes>
+        <DataSource ID="DS" TypeID="Windows!Microsoft.Windows.TimedPowerShell.DiscoveryProvider">
+          <IntervalSeconds>86400</IntervalSeconds>
+          <SyncTime />
+          <ScriptName>LOST.Virtual.Server.Discovery.ps1</ScriptName>
+          <ScriptBody>$IncludeFileContent/Scripts/LOST.Virtual.Server.Discovery.ps1$</ScriptBody>
+          <Parameters>
+            <Parameter>
+              <Name>SourceID</Name>
+              <Value>$MPElement$</Value>
+            </Parameter>
+            <Parameter>
+              <Name>ManagedEntityID</Name>
+              <Value>$Target/Id$</Value>
+            </Parameter>
+            <Parameter>
+              <Name>ComputerName</Name>
+              <Value>$Target/Property[Type="Windows!Microsoft.Windows.Computer"]/PrincipalName$</Value>
+            </Parameter>
+          </Parameters>
+          <TimeoutSeconds>120</TimeoutSeconds>
+        </DataSource>
+      </Discovery>
+    </Discoveries>
+  </Monitoring>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="LOST.Windows.Virtual.Machine.Discovery.Powershell.Script">
+          <Name>Virtual Windows VirtualMachineType Discovery</Name>
+          <Description>This discover the type of hypervisor used</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

@@ -1,0 +1,256 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Discoveries>
+      <Discovery ID="LOST.Virtual.Windows.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer" />
+        </DiscoveryTypes>
+        <DataSource ID="DiscoveryDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$Target/Id$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="LOST.Virtual.Windows.Computer.Class"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer"]$</RelationshipClass>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="LOST.Virtual.Windows.VMWare.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.VMWare.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer" />
+        </DiscoveryTypes>
+        <DataSource ID="DiscoveryDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$Target/Id$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="LOST.Virtual.Windows.VMWare.Computer.Class"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer"]$</RelationshipClass>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="LOST.Virtual.Windows.HyperV.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.HyperV.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer" />
+        </DiscoveryTypes>
+        <DataSource ID="DiscoveryDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$Target/Id$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="LOST.Virtual.Windows.HyperV.Computer.Class"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer"]$</RelationshipClass>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="LOST.Virtual.Windows.Xen.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.Xen.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer" />
+        </DiscoveryTypes>
+        <DataSource ID="DiscoveryDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$Target/Id$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="LOST.Virtual.Windows.Xen.Computer.Class"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer"]$</RelationshipClass>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="LOST.Virtual.Windows.ProxmoxVE.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.ProxmoxVE.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer" />
+        </DiscoveryTypes>
+        <DataSource ID="DiscoveryDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$Target/Id$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="LOST.Virtual.Windows.ProxmoxVE.Computer.Class"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer"]$</RelationshipClass>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="LOST.Virtual.Windows.VirtualBox.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.VirtualBox.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer" />
+        </DiscoveryTypes>
+        <DataSource ID="DiscoveryDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$Target/Id$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="LOST.Virtual.Windows.VirtualBox.Computer.Class"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SC!Microsoft.SystemCenter.ComputerGroupContainsComputer"]$</RelationshipClass>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="LOST.Virtual.Windows.2016Plus.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.2016Plus.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SCIG!Microsoft.SystemCenter.InstanceGroupContainsEntities" />
+        </DiscoveryTypes>
+        <DataSource ID="GroupPopulationDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$MPElement[Name="LOST.Virtual.Windows.2016Plus.Computers.Group"]$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="Win2016Plus!Microsoft.Windows.Server.10.0.Computer"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SCIG!Microsoft.SystemCenter.InstanceGroupContainsEntities"]$</RelationshipClass>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <Property>$MPElement[Name="Windows!Microsoft.Windows.Computer"]/IsVirtualMachine$</Property>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value>true</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="LOST.Virtual.Windows.2008.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.2008.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SCIG!Microsoft.SystemCenter.InstanceGroupContainsEntities" />
+        </DiscoveryTypes>
+        <DataSource ID="GroupPopulationDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$MPElement[Name="LOST.Virtual.Windows.2008.Computers.Group"]$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="Win2008!Microsoft.Windows.Server.2008.Computer"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SCIG!Microsoft.SystemCenter.InstanceGroupContainsEntities"]$</RelationshipClass>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <Property>$MPElement[Name="Windows!Microsoft.Windows.Computer"]/IsVirtualMachine$</Property>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value>true</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="LOST.Virtual.Windows.2012.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.2012.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SCIG!Microsoft.SystemCenter.InstanceGroupContainsEntities" />
+        </DiscoveryTypes>
+        <DataSource ID="GroupPopulationDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$MPElement[Name="LOST.Virtual.Windows.2012.Computers.Group"]$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="WinSrv!Microsoft.Windows.Server.6.2.Computer"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SCIG!Microsoft.SystemCenter.InstanceGroupContainsEntities"]$</RelationshipClass>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <Property>$MPElement[Name="Windows!Microsoft.Windows.Computer"]/IsVirtualMachine$</Property>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value>true</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="LOST.Virtual.Windows.2012R2.Computers.Group.Discovery" Enabled="true" Target="LOST.Virtual.Windows.2012R2.Computers.Group" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryRelationship TypeID="SCIG!Microsoft.SystemCenter.InstanceGroupContainsEntities" />
+        </DiscoveryTypes>
+        <DataSource ID="GroupPopulationDataSource" TypeID="SC!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$MPElement[Name="LOST.Virtual.Windows.2012R2.Computers.Group"]$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="Win2012!Microsoft.Windows.Server.2012.R2.Computer"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="SCIG!Microsoft.SystemCenter.InstanceGroupContainsEntities"]$</RelationshipClass>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <Property>$MPElement[Name="Windows!Microsoft.Windows.Computer"]/IsVirtualMachine$</Property>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value>true</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+    </Discoveries>
+  </Monitoring>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="LOST.Virtual.Windows.Computers.Group.Discovery">
+          <Name>Virtual Windows Computers Group Discovery [LOST]</Name>
+          <Description>This discovery rule populates a group of Virtual Windows Computer Objects that contain a LOST.Virtual.Windows.Computer.Class instance</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.VMWare.Computers.Group.Discovery">
+          <Name>Virtual Windows VMWare Computers Group Discovery [LOST]</Name>
+          <Description>This discovery rule populates a group of Windows Computer Objects that contain a LOST.Virtual.Windows.VMWare.Computer.Class instance</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.HyperV.Computers.Group.Discovery">
+          <Name>Virtual Windows Hyper-V Computers Group Discovery [LOST]</Name>
+          <Description>This discovery rule populates a group of Windows Computer Objects that contain a LOST.Virtual.Windows.HyperV.Computer.Class instance</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.Xen.Computers.Group.Discovery">
+          <Name>Virtual Windows Xen Computers Group Discovery [LOST]</Name>
+          <Description>This discovery rule populates a group of Windows Computer Objects that contain a LOST.Virtual.Windows.Xen.Computer.Class instance</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.ProxmoxVE.Computers.Group.Discovery">
+          <Name>Virtual Windows Proxmox Computers Group Discovery [LOST]</Name>
+          <Description>This discovery rule populates a group of Windows Computer Objects that contain a LOST.Virtual.Windows.Proxmox.Computer.Class instance</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.VirtualBox.Computers.Group.Discovery">
+          <Name>Virtual Windows VirtualBox Computers Group Discovery [LOST]</Name>
+          <Description>This discovery rule populates a group of Windows Computer Objects that contain a LOST.Virtual.Windows.VirtualBox.Computer.Class instance</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.2016Plus.Computers.Group.Discovery">
+          <Name>Populate Virtual Windows 2016+ Servers [LOST]</Name>
+          <Description>This discovery rule populates the group 'Virtual Windows 2016+ Servers'</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.2008.Computers.Group.Discovery">
+          <Name>Populate Virtual Windows 2008 Servers [LOST]</Name>
+          <Description>This discovery rule populates the group 'Virtual Windows 2008 Servers'</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.2012.Computers.Group.Discovery">
+          <Name>Populate Virtual Windows 2012 Servers [LOST]</Name>
+          <Description>This discovery rule populates the group 'Virtual Windows 2012 Servers'</Description>
+        </DisplayString>
+        <DisplayString ElementID="LOST.Virtual.Windows.2012R2.Computers.Group.Discovery">
+          <Name>Populate Virtual Windows 2012 R2 Servers [LOST]</Name>
+          <Description>This discovery rule populates the group 'Virtual Windows 2012 R2 Servers'</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>
