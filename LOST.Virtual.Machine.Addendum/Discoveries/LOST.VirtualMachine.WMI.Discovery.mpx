@@ -11,7 +11,7 @@
         </DiscoveryTypes>
         <DataSource ID="DS" TypeID="Windows!Microsoft.Windows.WmiProviderWithClassSnapshotDataMapper">
           <NameSpace>root\cimv2</NameSpace>
-          <Query><![CDATA[SELECT * FROM Win32_ComputerSystem WHERE (NOT Manufacturer LIKE '%Microsoft Corporation%' AND NOT Model LIKE '%Virtual Machine%') AND (NOT Manufacturer LIKE '%VMware%' AND NOT Model LIKE '%VMware Virtual Platform%') AND (NOT Manufacturer LIKE '%Xen%' AND NOT Model LIKE '%HVM%') AND (NOT Manufacturer LIKE 'QEMU%' AND NOT Model LIKE 'Standard PC%') AND (NOT Manufacturer LIKE '%innotek%GmbH%' AND NOT Model LIKE 'VirtualBox%')]]></Query>
+          <Query><![CDATA[SELECT * FROM Win32_ComputerSystem WHERE (NOT Manufacturer LIKE '%Microsoft Corporation%' AND NOT Model LIKE '%Virtual Machine%') AND (NOT Manufacturer LIKE '%VMware%' AND NOT Model LIKE '%VMware%') AND (NOT Manufacturer LIKE '%Xen%' AND NOT Model LIKE '%HVM%') AND (NOT Manufacturer LIKE 'QEMU%' AND NOT Model LIKE 'Standard PC%') AND (NOT Manufacturer LIKE '%innotek%GmbH%' AND NOT Model LIKE 'VirtualBox%')]]></Query>
           <Frequency>86400</Frequency>
           <ClassId>$MPElement[Name="Windows!Microsoft.Windows.Computer"]$</ClassId>
           <InstanceSettings>
@@ -37,7 +37,7 @@
         </DiscoveryTypes>
         <DataSource ID="DS" TypeID="Windows!Microsoft.Windows.WmiProviderWithClassSnapshotDataMapper">
           <NameSpace>root\cimv2</NameSpace>
-          <Query><![CDATA[SELECT * FROM Win32_ComputerSystem WHERE (Manufacturer LIKE '%VMware%' AND Model LIKE '%VMware Virtual Platform%') or (Manufacturer LIKE '%Microsoft Corporation%' AND Model LIKE '%Virtual Machine%') or (Manufacturer LIKE '%Xen%' AND Model LIKE '%HVM%') or (Manufacturer LIKE 'QEMU%' AND Model LIKE 'Standard PC%') or (Manufacturer LIKE '%innotek%GmbH%' AND Model LIKE 'VirtualBox%')]]></Query>
+          <Query><![CDATA[SELECT * FROM Win32_ComputerSystem WHERE (Manufacturer LIKE '%VMware%' AND Model LIKE '%VMware%') or (Manufacturer LIKE '%Microsoft Corporation%' AND Model LIKE '%Virtual Machine%') or (Manufacturer LIKE '%Xen%' AND Model LIKE '%HVM%') or (Manufacturer LIKE 'QEMU%' AND Model LIKE 'Standard PC%') or (Manufacturer LIKE '%innotek%GmbH%' AND Model LIKE 'VirtualBox%')]]></Query>
           <Frequency>86400</Frequency>
           <ClassId>$MPElement[Name="Windows!Microsoft.Windows.Computer"]$</ClassId>
           <InstanceSettings>
